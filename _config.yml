@@ -21,6 +21,15 @@ whitelist:
 collections:
   authors:
     output: true
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+defaults:
+  - scope:
+      path: _docs
+      type: docs
+    values:
+      layout: docs
 
 # Exclude from processing.
 exclude:
