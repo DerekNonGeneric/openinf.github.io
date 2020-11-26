@@ -1,0 +1,32 @@
+- id: CODE_OF_CONDUCT
+  description: Expectations of conduct and code review that govern all members of the community.
+  title: OpenINF Code of Conduct
+  link_text: Code of Conduct
+  label: standards for how to engage in the OpenINF community
+  permalink: /en/docs/code-of-conduct/
+- id: CONTRIBUTING
+  description: An entrypoint to getting started with contributing to the OpenINF project.
+  title: Contribution Guidelines
+  link_text: Contributing
+  label: how people should contribute to OpenINF
+  permalink: /en/docs/dev/internals/contributing/
+- id: SECURITY
+  description: Summary of OpenINF security vulnerability reporting instructions and best practices.
+  title: OpenINF Security and Disclosure Information
+  link_text: Security
+  label: OpenINF security vulnerability reporting instructions and best practices
+  permalink: /en/docs/dev/internals/security/
+- id: SUPPORT
+  description: Support guidelines to get help for questions and issues related to OpenINF.
+  title: Support • Frequently Asked Questions
+  label: how people should get help for questions and issues related to OpenINF
+  link_text: Help
+  permalink: /en/docs/dev/faq/support/
+  redirect_from: /en/docs/dev/faq/help/
+- id: VISION
+  description: The main motivations of OpenINF.
+  title: OpenINF Vision
+  label: the OpenINF project vision
+  link_text: Vision
+  permalink: /en/about/vision/
+  redirect_from: /en/docs/dev/internals/about/vision/

@@ -1,0 +1,14 @@
+.pipe-nav {
+  display:block;
+  margin:0 auto;
+  padding:0;
+  text-align:center
+}
+.pipe-nav li {
+  display:inline-block;
+  list-style:none
+}
+.pipe-nav li+li::before {
+  content:'| ';
+  padding:0 .5em
+}

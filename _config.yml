@@ -4,8 +4,8 @@ email: code@open.inf.is
 description: >-
   Aggregate, curate, disseminate, and apply information derived from diverse
   sources.
-baseurl: ""
-url: "https://open.inf.is"
+baseurl: ''
+url: 'https://open.inf.is'
 twitter_username: openinf
 github_username: openinf
 
@@ -22,7 +22,7 @@ collections:
   authors:
     output: true
   docs:
-    permalink: "/:collection/:path/"
+    permalink: '/:collection/:path/'
     output: true
 defaults:
   - scope:
@@ -46,3 +46,6 @@ exclude:
   - SECURITY.md
   - SUPPORT.md
   - VISION.md
+
+sass:
+  style: compressed

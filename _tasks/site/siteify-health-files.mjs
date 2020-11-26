@@ -1,5 +1,5 @@
 /**
- * @file Process health files for website use.
+ * @file Process community health files for website use.
  * @author Derek Lewis <DerekNonGeneric@inf.is>
  */
 
