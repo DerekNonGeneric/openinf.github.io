@@ -18,17 +18,17 @@
 {%- endfor -%}
       </ul>
       <ul class="connect social-follow">
-{%- for venue in site.data.community_venues -%}
+{%- for tool in site.data.collaboration_tools -%}
         <li>
           <a
             target="_blank"
-            href="{{ venue.href }}"
+            href="{{ tool.href }}"
             rel="noopener noreferrer"
-            aria-label="{{ venue.description }}"
-            title="{{ venue.title }}"
+            aria-label="{{ tool.description }}"
+            title="{{ tool.title }}"
           >
-            <span class="sr-only">{{ venue.title }}</span>
-            {%- include assets/img/community/{{ venue.id }}.svg -%}
+            <span class="sr-only">{{ tool.title }}</span>
+            {%- include assets/img/community/{{ tool.id }}.svg -%}
           </a>
         </li>
 {%- endfor -%}

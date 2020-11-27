@@ -81,41 +81,50 @@ function siteifyFile(file, frontmatterOverrides = {}) {
 // Main
 // -----------------------------------------------------------------------------
 
-healthFiles.forEach((val) => {
-  switch (val) {
-    case 'CODE_OF_CONDUCT.md':
-      siteifyFile(val, {
-        title: 'OpenINF Code of Conduct',
-        editable: false,
-      });
-      break;
-    case 'CONTRIBUTING.md':
-      siteifyFile(val, {
-        title: 'Contributing to OpenINF',
-        permalink: '/en/docs/dev/internals/contributing/',
-      });
-      break;
-    case 'SECURITY.md': {
-      siteifyFile(val, {
-        title: 'OpenINF Security Policies',
-        permalink: '/en/docs/dev/internals/security/',
-      });
-      break;
+const commHealthFilesData = YAML.load('_data/community_health_files.yml');
+
+healthFiles.forEach((healthFileName) => {
+  commHealthFilesData.forEach((value) => {
+    if (value.id === healthFileName) {
+      siteifyFile(healthFileName, value);
     }
-    case 'SUPPORT.md':
-      siteifyFile(val, {
-        title: 'Support • Frequently Asked Questions',
-        permalink: '/en/docs/dev/faq/support/',
-        redirect_from: '/en/docs/dev/faq/help/',
-      });
-      break;
-    case 'VISION.md':
-      siteifyFile(val, {
-        title: 'OpenINF Vision',
-        permalink: '/en/about/vision/',
-      });
-      break;
-    default:
-      siteifyFile(val);
-  }
+  });
 });
+
+// switch (siteCommHealthFileVal) {
+//   case 'CODE_OF_CONDUCT.md':
+//     commHealthFilesData.forEach((commHealthFileDataVal) => {
+//       if (siteCommHealthFileVal === commHealthFileDataVal) {
+//         siteifyFile(siteCommHealthFileVal, commHealthFileDataVal);
+//       }
+//     });
+//     break;
+//   case 'CONTRIBUTING.md':
+//     siteifyFile(val, {
+//       title: 'Contributing to OpenINF',
+//       permalink: '/en/docs/dev/internals/contributing/',
+//     });
+//     break;
+//   case 'SECURITY.md': {
+//     siteifyFile(val, {
+//       title: 'OpenINF Security Policies',
+//       permalink: '/en/docs/dev/internals/security/',
+//     });
+//     break;
+//   }
+//   case 'SUPPORT.md':
+//     siteifyFile(val, {
+//       title: 'Support • Frequently Asked Questions',
+//       permalink: '/en/docs/dev/faq/support/',
+//       redirect_from: '/en/docs/dev/faq/help/',
+//     });
+//     break;
+//   case 'VISION.md':
+//     siteifyFile(val, {
+//       title: 'OpenINF Vision',
+//       permalink: '/en/about/vision/',
+//     });
+//     break;
+//   default:
+//     siteifyFile(val);
+// }
