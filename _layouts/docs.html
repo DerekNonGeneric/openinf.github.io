@@ -1,20 +1,20 @@
 ---
-layout: default
+layout: pages
 ---
 
-<main class="docs container">
+<main id="main" class="container pb4">
   <div class="grid">
     <div class="unit four-fifths">
       <article>
         <header class="contentHead">
-          {% if page.editable != false %}
+          {%- if page.editable != false -%}
           <div class="improve right">
-            <a href="https://github.com/openinf/openinf.github.io/edit/HEAD/{{ page.path }}">Edit</a>
+            <a class="btn btn-sm btn-outline btn-dark bg-transparent border" href="https://github.com/openinf/openinf.github.io/edit/HEAD/{{ page.path }}">Edit</a>
           </div>
-          {% endif %}
+          {%- endif -%}
           <h1>{{ page.title }}</h1>
         </header>
-        {{ content }}
+        {{- content -}}
       </article>
     </div>
   </div>

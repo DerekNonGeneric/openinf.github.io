@@ -1,0 +1,17 @@
+<ul class="collab-tools-nav sm-hide xs-hide grid-end">
+{%- for tool in site.data.collab-tools -%}
+  <li class="inline-block">
+    <a
+      class="p3 block"
+      target="_blank"
+      href="{{ tool.href }}"
+      rel="noopener noreferrer"
+      aria-label="{{ tool.description }}"
+      title="{{ tool.title }}"
+    >
+      <span class="sr-only">{{ tool.title }}</span>
+      {{- tool.icon -}}
+    </a>
+  </li>
+{%- endfor -%}
+</ul>

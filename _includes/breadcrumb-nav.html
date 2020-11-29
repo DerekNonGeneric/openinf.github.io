@@ -1,0 +1,20 @@
+{% set current_doc = g.doc(doc.pod_path) %}
+{% set list_items %}
+<li class="breadcrumb-item active">{{current_doc.titles('breadcrumb')}}</li>
+{% endset %}
+{% set current_doc = g.doc(current_doc.pod_path).parent %}
+{% if not current_doc == None %}
+  {% for _ in range(10) %}
+    {% set next_list_item %}
+    <li class="breadcrumb-item"><a class="text-decoration-none" href="{{current_doc.url.path}}">{{current_doc.titles('breadcrumb')}}</a></li>
+    {% endset %}
+    {% set list_items %}
+    {{next_list_item|safe + list_items|safe}}
+    {% endset %}
+    {% set current_doc = g.doc(current_doc.pod_path).parent %}
+    {% if current_doc == None %}{% break %}{% endif %}
+  {% endfor %}
+{% endif %}
+<ol class="breadcrumb border rounded overflow-auto px2 mt4 mb0">
+  {{list_items|safe}}
+</ol>

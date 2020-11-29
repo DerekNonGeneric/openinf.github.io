@@ -1,18 +1,111 @@
 // Colors
+$color-openinf: #b81f00;
 $color-openinf-dark: #AB6700;
-$color-primary: #089;
-$color-secondary: #77675A;
+$color-primary: #b81f00;
+$color-secondary: #089;
 $color-tertiary: #77675A;
 $color-link: #089;
-$color-text: #1D1916;
-$color-bg: #E9E9E2;
+
+
+
+// $color-eigengrau: ;
+
+
+// Eigengrau (#16191D), but with green increase to result in incremental RGB.
+$color-inf-eigengrau: #16191D;
+$color-inf-eigengrau-hue: 214;
+$color-inf-eigengrau-saturation: 14;
+$color-inf-eigengrau--inverted: #E9E6E2;
+$color-inf-eigengrau--inverted-hue: 34;
+$dim-gray-lightness: 41%;
+$color-inf-dim-gray: hsl(calc(#{$color-inf-eigengrau--inverted-hue}), calc(#{$color-inf-eigengrau-saturation}), calc(#{$dim-gray-lightness}));
+
+
+$color-bg:  calc(#{$color-inf-eigengrau});
+$color-text: calc(#{$color-inf-eigengrau--inverted});
+
 $color-divider: #A7978B;
-$color-dim-grayish: #77675A;
 
 // Font weights
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-semi-bold: 550;
+$bold-font-weight-light: 300;
+$bold-font-weight-regular: regular;
+$bold-font-weight-semi-bold: 550;
+$bold-font-weight-bold: bold;
+
+// Headings
+$h1: 2rem;
+$h2: 1.5rem;
+$h3: 1.25rem;
+$h4: 1rem;
+$h5: .875rem;
+$h6: .75rem;
+
+
+$line-height-4: 1.5rem;
+
+$space-1: .25rem;
+$space-2: .5rem;
+$space-3: 1rem;
+$space-4: 2rem;
+
+$border-width: 2px;
+$border-radius: 3px;
+
+/* Z-index */
+$z1: 1;
+$z2: 2;
+$z3: 3;
+$z4: 999;
+
+$p4: 4rem;
+
+/* Brand palette */
+
+$brand-hue: calc(#{$color-inf-eigengrau-hue});
+$brand-primary: hsla(calc(#{$brand-hue}), 100%, 30%, 1);
+$brand-secondary: hsla(calc(#{$brand-hue}), 20%, 98%, 1);
+$brand-tertiary: hsla(calc(#{$brand-hue}), 21%, 88%, 1);
+$brand-quaternary: hsla(calc(#{$brand-hue}), 22%, 28%, 1);
+$brand-subtle: hsla(calc(#{$brand-hue}), 30%, 68%, 1);
+$text-muted: color(calc(#{$brand-tertiary}) l(- 32%));
+$brand-dark-subtle: color(calc(#{$brand-tertiary}) l(- 47%));
+
+$body-bg: calc(#{$color-inf-eigengrau--inverted});
+$body-color: calc(#{$color-inf-eigengrau});
+
+/* Table */
+$table-border-width: 1px;
+$table-cell-padding: .75rem;
+$table-border-color: calc(#{$brand-tertiary});
+$table-bg-hover: calc(#{$brand-tertiary});
+$table-bg-accent: calc(#{$brand-tertiary});
+$table-sm-cell-padding: calc(#{$space-1});
+
+
+$border-radius: .25rem;
+
+$caps-letter-spacing: .05rem;
+
+/* Site header */
+
+$site-header-logo-padding: .75rem;
+$site-header-nav-item-padding-y: 1.25rem;
+/*$site-header-nav-item-letter-spacing: .04em;*/
+$nav-item-height: 60px;
+$site-header-height: calc(#{$nav-item-height});
+
+$input-color-placeholder: calc(#{$brand-tertiary});
+
+/* Breadcrumb */
+
+$breadcrumb-divider: ❯;
+$breadcrumb-item-padding: calc(#{$space-2});
+$breadcrumb-bg: transparent;
+$breadcrumb-padding-x: calc(#{$space-2});
+$breadcrumb-padding-y: calc(#{$space-2});
+$spacer-y: calc(#{$space-2});
+$breadcrumb-divider-color: calc(#{$text-muted});
+$breadcrumb-active-color: calc(#{$text-muted});
 
 // Spacing
 $grid-gutter: 40px;

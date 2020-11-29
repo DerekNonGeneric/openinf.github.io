@@ -1,0 +1,28 @@
+<footer class="sm-pb4">
+  <div class="footer-links grid-container">
+    {%- include collab-tools-nav.html -%}
+  </div>
+  <div class="footer-details grid-container">
+    <div class="grid-start">
+      <span class="italic">Suggestions and comments are welcome.<br>Please <a href="https://github.com/openinf/openinf.github.io/issues/new" target="_blank">open an issue</a> in <a href="https://github.com/openinf/openinf.github.io" target="_blank">our site repository</a>.</span>
+    </div>
+    <div class="grid-end">
+      <ul class="pipe-nav flex justify-end">
+        {%- for file in site.data.meta-files -%}
+        <li>
+          <a
+            href="{{ site.url }}{{ file.permalink }}"
+            aria-label="{{ file.label }}"
+            title="{{ file.title }}"
+          >
+            {{ file.link_text }}
+          </a>
+        </li>
+        {%- endfor -%}
+      </ul>
+      <div class="flex justify-end">
+        <span class="line-height-4">&copy; OpenINF</span>
+      </div>
+    </div>
+  </div>
+</footer>

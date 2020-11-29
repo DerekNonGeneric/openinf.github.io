@@ -1,0 +1,14 @@
+---
+layout: base
+---
+
+<main class="container px4 content" role="main">
+  <div class="clearfix flex flex-wrap max-width-4 mx-auto">
+    <div class="col col-12 px2">
+      {%- include breadcrumb-nav.html -%}
+    </div>
+    <div class="col col-12 px2">
+      <h1 class="page-heading">{{ doc.title }}</h1>
+    </div>
+    {{- content -}}
+</main>

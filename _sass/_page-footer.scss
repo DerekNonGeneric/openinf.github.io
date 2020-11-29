@@ -1,0 +1,27 @@
+footer {
+  padding: 0 1.5rem;
+  line-height: 2em;
+}
+
+footer .grid-container.footer-details {
+  border-top: 1px solid #A7978B;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 1.5rem;
+  color: #77675A;
+}
+
+@media only screen and (min-width: 768px) {
+  footer .grid-container.footer-details {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer .grid-start {
+    justify-self: start;
+    text-align: left;
+  }
+
+  footer .grid-end {
+    justify-self: end;
+    text-align: right;
+  }
+}
